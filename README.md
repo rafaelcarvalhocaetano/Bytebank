@@ -1,6 +1,9 @@
 # Bytebank
 App with bank transfer functionality through a hybrid application using Flutter
 
+## UBUNTU 18.04
+ - sudo setfacl -m u:$USER:rwx /dev/kvm
+
 ## CREATE
 
  - flutter create <name> ``` Cria uma aplicação ```
