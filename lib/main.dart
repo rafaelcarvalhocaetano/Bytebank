@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+<<<<<<< HEAD
 void main() => runApp(BytebankApp());
 
 class BytebankApp extends StatelessWidget {
@@ -72,12 +73,24 @@ class FormularioTransferencia extends StatelessWidget {
     );
   }
 }
+=======
+void main() => runApp(MaterialApp(
+  home: Scaffold(
+    body: ListaTransferencia(),
+    appBar: AppBar(title: Text('Transferências'),),
+    floatingActionButton: FloatingActionButton(
+      child: Icon(Icons.add),
+    ),
+  ),
+));
+>>>>>>> Init create App with tree widget
 
 class ListaTransferencia extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
+<<<<<<< HEAD
     return Scaffold(
       body: Column(
         children: <Widget>[
@@ -107,10 +120,41 @@ class ItemTransferencia extends StatelessWidget {
         title: Text(_transferencia.valor.toString()),
         subtitle: Text(_transferencia.numeroConta.toString()),
       ),
+=======
+    return Column(
+      children: <Widget>[
+        ItemTransferencia(Transferencia(100.00, 10000)),
+        ItemTransferencia(Transferencia(200.00, 20000)),
+        ItemTransferencia(Transferencia(300.00, 30000))
+      ],
+>>>>>>> Init create App with tree widget
     );
   }
 }
 
+<<<<<<< HEAD
+=======
+class ItemTransferencia extends StatelessWidget {
+
+
+  final Transferencia _transferencia;
+
+  ItemTransferencia(this._transferencia);
+
+  @override
+  Widget build(BuildContext context) {
+    // TODO: implement build
+    return Card(
+      child: ListTile(
+        leading: Icon(Icons.monetization_on),
+        title: Text(_transferencia.valor.toString()),
+        subtitle: Text(_transferencia.numeroConta.toString()),
+      ),
+    );
+  }
+}
+
+>>>>>>> Init create App with tree widget
 class Transferencia {
 
   final double valor;
@@ -118,8 +162,11 @@ class Transferencia {
 
   Transferencia(this.valor, this.numeroConta);
 
+<<<<<<< HEAD
   @override
   String toString() {
     return 'Transferencia{valor: $valor, numeroConta: $numeroConta}';
   }
+=======
+>>>>>>> Init create App with tree widget
 }
